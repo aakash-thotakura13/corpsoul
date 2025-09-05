@@ -90,7 +90,7 @@ export default function AboutUs() {
             />
             <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>CorpSoul Solutions has established itself as a leading provider of comprehensive corporate supply solutions. We understand that successful businesses need reliable partners who can deliver consistent quality and service.</p>
             <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>Our expertise spans across three core areas: thoughtful corporate gifting that strengthens relationships, comprehensive office stationery that keeps businesses running smoothly, and reliable housekeeping supplies that maintain professional environments.</p>
-            <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>What sets us apart is our commitment to understanding each client's unique needs and delivering personalized solutions that exceed expectations. We believe in building long-term partnerships based on trust, quality, and reliability.</p>
+            <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>What sets us apart is our commitment to understanding each client&#39;s vision and requirements unique needs and delivering personalized solutions that exceed expectations. We believe in building long-term partnerships based on trust, quality, and reliability.</p>
 
           </div>
 
@@ -137,7 +137,7 @@ export default function AboutUs() {
         <div style={{ background: "", padding: "2em", width: "85%", margin: "0em auto", backgroundColor: "#155DFC22", borderRadius: "1em", }}>
 
           <h2 style={{ fontSize: "1.45em", fontWeight: "bold", textAlign: "center", }}>Ready to Partner With Us?</h2>
-          <p style={{ textAlign: "center", }}>Let's discuss how CorpSoul Solutions can meet your corporate supply needs and help strengthen your business relationships.</p>
+          <p style={{ textAlign: "center", }}>Let&#39;s discuss how CorpSoul Solutions can meet your corporate supply needs and help strengthen your business relationships.</p>
 
           <section style={{ display: "flex", flexWrap: "wrap", gap: "1em", padding: "1em 0em", flex: "1 1 auto", alignItems: "center", justifyContent: "center", }}>
             <button style={{ display: "flex", alignItems: "center", gap: "1em", backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}>Request a Quote <SlArrowRightCircle /></button>

@@ -49,6 +49,13 @@ const ourServices = [
   },
 ];
 
+const socialMediaIcons = [
+  { icon: SlSocialFacebook },
+  { icon: SlSocialInstagram },
+  { icon: SlSocialLinkedin },
+  { icon: SlSocialTwitter },
+];
+
 export default function FooterComponent() {
   return (
     <section style={{ backgroundColor: "#101828", color: "#FFFFFF", }}>
@@ -60,13 +67,20 @@ export default function FooterComponent() {
 
           <p>Your trusted partner for corporate supplies, gifting solutions, and housekeeping materials. Building lasting business relationships since 2019.</p>
 
-          <section style={{ display: "flex", gap: "1em", padding: "2em 0em", }}>
-            {
-              [
-                <SlSocialFacebook style={{ fontSize: "1.5em", }} />, <SlSocialInstagram style={{ fontSize: "1.5em", }} />,
-                <SlSocialLinkedin style={{ fontSize: "1.5em", }} />, <SlSocialTwitter style={{ fontSize: "1.5em", }} />,
-              ].map((item, id) => <p key={id} style={{ color: "#101828", backgroundColor: "white", padding: "0.5em", borderRadius: "1em" }}>{item}</p>)
-            }
+          <section style={{ display: "flex", gap: "1em", padding: "2em 0em" }}>
+            {socialMediaIcons.map(({ icon: Icon }, id) => (
+              <p
+                key={id}
+                style={{
+                  color: "#101828",
+                  backgroundColor: "white",
+                  padding: "0.5em",
+                  borderRadius: "1em",
+                }}
+              >
+                <Icon style={{ fontSize: "1.5em" }} />
+              </p>
+            ))}
           </section>
 
         </div>

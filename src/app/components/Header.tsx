@@ -1,57 +1,108 @@
+"use client";
+
+import logo from "../../app/favicon.ico"
+
+import { useState } from "react";
 import Link from "next/link";
 import TempLogo from "./reusable/TempLogo";
-import { SlPhone, SlEnvolope, } from "react-icons/sl";
-
+import { FiMenu, FiX } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 const routes = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "About Us",
-    path: "/about",
-  },
-  {
-    name: "Services",
-    path: "/services",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "Contact", path: "/contact" },
 ];
 
-
 export default function HeaderComponent() {
+
+  const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
   return (
-    <section style={{ width: "85%", margin: "0em auto", }}>
+    <header style={{ width: "85%", margin: "0 auto", position: "sticky", top: 0, background: "linear-gradient(to right, transparent, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", }}>
 
-      <section style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "1em", margin: "0.4em 0em 0em", }}>
-        <small style={{ display: "flex", alignItems: "center", gap: "0em 1em", fontSize: "0.9em", color: "grey" }}><SlPhone /> +91 8886911011</small>
-        <small style={{ display: "flex", alignItems: "center", gap: "0em 1em", fontSize: "0.9em", color: "grey" }}><SlEnvolope />corpsoulsolutions@gmail.com</small>
-      </section>
+      {/* Main header */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0,  padding: "0.5em 0", }}>
 
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: "0", flexWrap: "wrap", }}>
+        {/* Logo */}
+        <div style={{}}>
+          {/* <TempLogo /> */}
+          <img src={logo.src} alt="corpsoul_logo" style={{ width: "50px", height: "50px", borderRadius: "50%", boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }} />
+        </div>
 
-        <TempLogo />
-
-        <nav style={{ flex: "1 1 auto", }}>
-          <ul style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0em 5em", listStyle: "none", flexWrap: "wrap", }}>
-            {routes.map((route) => (
-              <Link key={route.name} href={route.path} style={{ flex: "1 1 auto", }} >
-                {route.name}
-              </Link>
-            ))}
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex flex-1 justify-center items-center">
+          <ul style={{ display: "flex", gap: "5em", listStyle: "none", padding: 0, margin: 0 }}>
+            {routes.map((route) => {
+              const isActive = pathname === route.path;
+              return (
+                <li key={route.name}>
+                  <Link
+                    href={route.path}
+                    style={{
+                      color: isActive ? "#155DFC" : "#000",
+                      fontWeight: isActive ? "bold" : "normal",
+                      borderBottom: isActive ? "2px solid #155DFC" : "none",
+                      paddingBottom: "0.2em",
+                    }}
+                  >
+                    {route.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
-        <section style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "1em", flex: "1 1 auto", }}>
-          <button style={{ backgroundColor: "#FFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", }}>Request Quote</button>
-          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}>Get Started</button>
-        </section>
+        {/* CTA buttons - Desktop */}
+        <div className="hidden md:flex flex-1 justify-end items-center gap-4">
+          <button style={{ backgroundColor: "#FFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em" }}>Request Quote</button>
+          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em" }}>Get Started</button>
+        </div>
+
+        {/* Hamburger Button - Mobile Only */}
+        <button className="md:hidden text-2xl text-blue-700" onClick={toggleMobileMenu} aria-label="Toggle menu" style={{ marginLeft: "auto" }}>{isMobileMenuOpen ? <FiX /> : <FiMenu />}</button>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <nav className="md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4">
+            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              {routes.map((route) => {
+                const isActive = pathname === route.path;
+                return (
+                  <li key={route.name}>
+                    <Link
+                      href={route.path}
+                      onClick={closeMobileMenu}
+                      style={{
+                        display: "block",
+                        padding: "0.5em 0",
+                        color: isActive ? "#155DFC" : "#333",
+                        fontWeight: isActive ? "bold" : "normal",
+                      }}
+                    >
+                      {route.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* CTA buttons - Mobile */}
+            <div className="flex flex-col gap-2 mt-4">
+              <button style={{ backgroundColor: "#FFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em" }}>Request Quote</button>
+              <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em" }}>Get Started</button>
+            </div>
+          </nav>
+        )}
 
       </div>
-    </section>
+
+    </header>
   );
 }

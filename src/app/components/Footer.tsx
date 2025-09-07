@@ -61,11 +61,14 @@ export default function FooterComponent() {
           <p>Your trusted partner for corporate supplies, gifting solutions, and housekeeping materials. Building lasting business relationships since 2019.</p>
 
           <section style={{ display: "flex", gap: "1em", padding: "2em 0em", }}>
-            <SlSocialFacebook style={{ fontSize: "1.5em", }} />
-            <SlSocialInstagram style={{ fontSize: "1.5em", }} />
-            <SlSocialLinkedin style={{ fontSize: "1.5em", }} />
-            <SlSocialTwitter style={{ fontSize: "1.5em", }} />
+            {
+              [
+                <SlSocialFacebook style={{ fontSize: "1.5em", }} />, <SlSocialInstagram style={{ fontSize: "1.5em", }} />,
+                <SlSocialLinkedin style={{ fontSize: "1.5em", }} />, <SlSocialTwitter style={{ fontSize: "1.5em", }} />,
+              ].map((item, id) => <p key={id} style={{ color: "#101828", backgroundColor: "white", padding: "0.5em", borderRadius: "1em" }}>{item}</p>)
+            }
           </section>
+
         </div>
 
         <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>

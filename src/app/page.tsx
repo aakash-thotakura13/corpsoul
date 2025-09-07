@@ -114,7 +114,7 @@ export default function Home() {
 
       <div style={{ background: "linear-gradient(to bottom, #155DFC00, #155DFC21)", padding: "4em 0em", }}>
 
-        <div style={{ width: "85%", margin: "0em auto", display: "flex", flexWrap: "wrap", gap: "2em", }}>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "1em auto", padding: "0em 1em", display: "flex", flexWrap: "wrap", gap: "2em", }}>
 
           <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", flexWrap: "wrap", gap: "1em", flex: "1 1 350px", }}>
 
@@ -160,35 +160,32 @@ export default function Home() {
           description="From corporate gifting to office essentials, we provide end-to-end supply solutions that help businesses build relationships and maintain efficient operations."
         />
 
-        <div style={{ display: "flex", gap: "4em", justifyContent: "center", margin: "2em 0em", flex: "1 1 350px", }}>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "4em auto 2em", }}>
 
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "1em", }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1em", }}>
             {
               minServices.map((item, id) => {
                 return (
-                  // <section key={id} style={{ width: "350px", display: "flex", flexDirection: "column", justifyContent: "space-between", flex: "1 1 350px", borderRadius: "1em", border: "1px solid lightgray", margin: "0em auto", }}>
-                  <section key={id} className="services" style={{ width: "350px", justifyContent: "space-between", flex: "1 1 350px", borderRadius: "1em", border: "1px solid lightgray", margin: "0em auto", }}>
+                  <section key={id} className="services" style={{ maxWidth: "350px", flex: "1 1 350px", borderRadius: "1em", border: "1px solid lightgray", margin: "0em auto", }}>
 
                     <div style={{ width: "350px", height: "150px", borderTopLeftRadius: "1em", borderTopRightRadius: "1em", overflow: "hidden", display: "flex", justifyContent: "center", margin: "0em auto", }}>
-                      <img src={item.image} alt={item.heading} style={{ width: "100%", height: "auto", objectFit: "cover", }} />
+                      <img src={item.image} alt={item.heading.replaceAll(" ", "_").toLocaleLowerCase()} style={{ width: "100%", height: "auto", objectFit: "cover", }} />
                     </div>
 
                     <div style={{ padding: "1em", display: "flex", flexDirection: "column", flex: "1 1 0" }}>
 
-                      <h2 style={{ fontSize: "1.5em", margin: "1em 0em", padding: "0em", fontWeight: "bold", }}>{item.heading}</h2>
+                      <h2 style={{ fontSize: "1.5em", margin: "1em auto", padding: "0em", fontWeight: "bold", }}>{item.heading}</h2>
                       <p style={{ padding: "0.5em 0em", }}>{item.description}</p>
-                      <div style={{ padding: "1em 0em", }}>
-                        <ul>
-                          {
-                            item.points.map((point, index) => (
-                              <li key={index} style={{ listStyle: "disc", margin: "0.25em 2em", }}>{point}</li>
-                            ))
-                          }
-                        </ul>
-                      </div>
+                      <ul style={{ padding: "1em 0em", }}>
+                        {
+                          item.points.map((point, index) => (
+                            <li key={index} style={{ listStyle: "disc", margin: "0.25em 2em", }}>{point}</li>
+                          ))
+                        }
+                      </ul>
 
-                      <div style={{ display: "grid", padding: "1em 0em", justifyContent: "center", }}>
-                        <button style={{ display: "flex", alignItems: "center", gap: "1em", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", fontWeight: "500", }}>Learn More <SlControlPlay /> </button>
+                      <div style={{ padding: "1em 0em", display: "flex", justifyContent: "flex-end", }}>
+                        <button style={{ display: "flex", placeContent: "center", placeItems: "center", gap: "1em", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", fontWeight: "500", }}>Learn More <SlControlPlay /></button>
                       </div>
 
                     </div>
@@ -214,29 +211,37 @@ export default function Home() {
           description="We understand that successful businesses need reliable partners. Here's what makes us the preferred choice for 500+ corporate clients across industries."
         />
 
-        <div style={{ width: "85%", margin: "4em auto", display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "center", }}>
-          {
-            longTerm.map((item, id) => {
-              return (
-                <div key={id} style={{ border: "1px solid lightgray", padding: "1.5em", borderRadius: "1em", flex: "1 1 auto", maxWidth: "350px", backgroundColor: "white", }}>
-                  <p style={{ display: "inline-block", fontSize: "1.4em", color: "#155DFC", backgroundColor: "#155DFC22", padding: "0.5em", borderRadius: "0.5em" }}>{item.icon}</p>
-                  <h1 style={{ fontWeight: "500", padding: "0.5em 0em", }}>{item.heading}</h1>
-                  <p style={{ color: "gray" }}>{item.description}</p>
-                </div>
-              )
-            })
-          }
+        <div style={{ margin: "4em auto", padding:"auto 1em" }}>
+
+          <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "space-between", }}>
+            {
+              longTerm.map((item, id) => {
+                return (
+                  <div key={id} className="services" style={{ border: "1px solid lightgray", padding: "1.5em", borderRadius: "1em", flex: "1 1 auto", maxWidth: "350px", backgroundColor: "white", }}>
+                    <p style={{ display: "inline-block", fontSize: "1.4em", color: "#155DFC", backgroundColor: "#155DFC22", padding: "0.5em", borderRadius: "0.5em" }}>{item.icon}</p>
+                    <h1 style={{ fontWeight: "500", padding: "0.5em 0em", }}>{item.heading}</h1>
+                    <p style={{ color: "gray" }}>{item.description}</p>
+                  </div>
+                )
+              })
+            }
+          </div>
+
         </div>
 
-        <div style={{ width: "85%", margin: "4em auto", display: "flex", flexWrap: "wrap", gap: "5em", justifyContent: "space-evenly", border: "1px solid lightgray", padding: "1em", borderRadius: "1em", backgroundColor: "white", }}>
-          {
-            longTerm2.map((item, index) => (
-              <section key={index} style={{ textAlign: "center", flex: "1 1 auto", }}>
-                <h2 style={{ fontSize: "1.7em", fontWeight: "700", color: "#155DFC", }}>{item.heading}</h2>
-                <h4 style={{ lineHeight: "0.9em", color: "grey", textTransform: "uppercase", }}>{item.description}</h4>
-              </section>
-            ))
-          }
+        <div style={{ margin: "0em 1em" }}>
+
+          <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "1em auto", display: "flex", gap: "1em", justifyContent: "space-between", backgroundColor: "white", borderRadius: "1em", border: "1px solid lightgray", }}>
+            {
+              longTerm2.map((item, index) => (
+                <section key={index} style={{ margin: "1em auto", padding: "1em 0em", textAlign: "center", flex: "1 1 0", }}>
+                  <h2 style={{ fontSize: "1.7em", fontWeight: "700", color: "#155DFC", }}>{item.heading}</h2>
+                  <h4 style={{ lineHeight: "0.9em", color: "grey", textTransform: "uppercase", }}>{item.description}</h4>
+                </section>
+              ))
+            }
+          </div>
+
         </div>
 
       </div>

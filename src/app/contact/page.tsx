@@ -44,13 +44,13 @@ export default function Contact() {
 
       </div>
 
-      <div style={{ width: "85%", margin: "0em auto 4em", padding: "2em 0em", backgroundColor: "#155DFC15", borderRadius: "1em", }}>
+      <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto 4em", padding: "2em 0em", backgroundColor: "#155DFC11", borderRadius: "1em", }}>
 
         <Heading
           title="Let's Build Lasting Business Relationships"
           description="Ready to streamline your corporate supplies? Get in touch with our team today for a personalized consultation and competitive quote." />
 
-        <div style={{ width: "85%", margin: "4em auto", display: "flex", flexWrap: "wrap", gap: "2em", }}>
+        <div style={{ width: "85%", minWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "2em", }}>
 
           <section style={{ flex: "1 1 350px", margin: "2em 0em", }}>
 
@@ -58,24 +58,28 @@ export default function Contact() {
 
           </section>
 
-          <section style={{ margin: "0em auto", flex: "1 1 350px", display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "space-evenly" }}>
-            {
-              contactInfo.map((entry, id) => (
-                <div key={id} style={{ flex: "1 1 auto", display: "flex", alignItems: "center", borderBottom: "1px solid lightgray", padding: "1em 0.1em" }}>
-                  <p style={{ aspectRatio: "1/1", display: "inline-block", fontSize: "1.5em", marginLeft: "1em", }}>{entry.icon}</p>
-                  <div style={{ marginLeft: "1em", }}>
-                    <p className="font-bold text-yellow-700">{entry.title}</p>
-                    <div className="leading-tight text-sm text-gray-600">
-                      {entry.details.map((entry, id) => <p key={id}>{entry}</p>)}
+          <section style={{ margin: "0em auto", flex: "1 1 auto", minWidth: "350px", display: "flex", flexDirection: "column", }}>
+
+            <div>
+              {
+                contactInfo.map((entry, id) => (
+                  <div key={id} style={{ display: "flex", gap: "1em", margin: "2em auto", alignItems: "flex-start", }}>
+                    <p style={{ fontSize: "2em", display: "inline", textShadow: "1px 1px 1px black", color: "white", placeContent: "center", placeItems: "center", }}>{entry.icon}</p>
+                    <div style={{}}>
+                      <p className="font-bold text-yellow-700">{entry.title}</p>
+                      <ul className="leading-tight text-sm text-gray-600">
+                        {entry.details.map((entry, id) => <li key={id} style={{ listStyle: "disc", marginLeft: "2em", }}>{entry}</li>)}
+                      </ul>
                     </div>
                   </div>
-                </div>
-              ))
-            }
+                ))
+              }
+            </div>
 
-            <div style={{ border: "1px solid #00C950", margin: "1em 0em", padding: "1em", borderRadius: "1em", display: "flex", gap: "1em", alignItems: "center", justifyContent: "space-between", flex: "1 1 auto", }}>
+            <div style={{ backgroundColor: "white", border: "1px solid #00C95088", boxShadow: "0px 0px 2.5px 0px grey", margin: "1em 0em", padding: "1em", borderRadius: "1em", display: "flex", gap: "1em", alignItems: "center", justifyContent: "space-between", flex: "1 1 auto", }}>
 
               <div style={{ display: "flex", gap: "1em", alignItems: "center", }}>
+
                 <div style={{ fontSize: "1.5em", color: "white", backgroundColor: "#00C950", padding: "0.25em", borderRadius: "5em", placeContent: "center", placeItems: "center", }}>
                   <TbMessageCircle style={{ fontSize: "1.6em", }} />
                 </div>
@@ -84,13 +88,14 @@ export default function Contact() {
                   <p style={{ fontWeight: "bold", }}>Quick WhatsApp Support</p>
                   <p style={{ fontSize: "0.7em" }}>Get instant responses to your queries</p>
                 </div>
+
               </div>
 
               <button style={{ backgroundColor: "#00C950", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "white" }}>Chat Now</button>
 
             </div>
 
-            <div style={{ border: "1px solid #155DFC", margin: "1em 0em", padding: "1em", borderRadius: "1em", display: "grid", gap: "1em", alignContent: "center", textAlign: "center", }}>
+            <div style={{ backgroundColor: "white", border: "1px solid #155DFC88", boxShadow: "0px 0px 2.5px 0px grey", margin: "1em 0em", padding: "1em", borderRadius: "1em", display: "grid", gap: "1em", alignItems: "center", textAlign: "center", }}>
 
               <p style={{ fontWeight: "bold", }}>Download Our Catalogue</p>
 

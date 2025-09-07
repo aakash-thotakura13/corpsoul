@@ -45,3 +45,9 @@ img:hover {
   transition: transform 0.3s ease;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

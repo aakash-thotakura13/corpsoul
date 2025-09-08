@@ -211,7 +211,7 @@ export default function Home() {
           description="We understand that successful businesses need reliable partners. Here's what makes us the preferred choice for 500+ corporate clients across industries."
         />
 
-        <div style={{ margin: "4em auto", padding:"auto 1em" }}>
+        <div style={{ margin: "4em auto", padding:"0em 1em" }}>
 
           <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "space-between", }}>
             {

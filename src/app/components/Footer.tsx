@@ -60,7 +60,7 @@ export default function FooterComponent() {
   return (
     <section style={{ backgroundColor: "#101828", color: "#FFFFFF", }}>
 
-      <div style={{ width: "85%", margin: "0em auto", display: "flex", flexWrap: "wrap", padding: "2em 0em", gap: "1em", }}>
+      <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", display: "flex", flexWrap: "wrap", padding: "2em 0em", gap: "1em", }}>
 
         <div style={{ flex: "1 1 200px", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
           <div style={{ paddingBottom: "1em", }}><TempLogo /></div>

@@ -2,29 +2,32 @@ import Heading from "../components/reusable/Heading";
 import ContactPageForm from "../components/reusable/ContactPageForm";
 
 import { TbMessageCircle } from "react-icons/tb";
+// import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaMailBulk, FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
+
 
 
 const contactInfo = [
   {
-    icon: "📞",
+    icon: <FaPhone style={{ fontSize: "1em" }} />,
     title: "Phone Numbers",
     details: ["Main: +91 XXXXX XXXXX", "Orders: +91 XXXXX XXXXX"],
     color: "text-gold"
   },
   {
-    icon: "📧",
+    icon: <FaMailBulk style={{ fontSize: "1em" }} />,
     title: "Email Addresses",
     details: ["General: info@corpsoul.com", "Orders: orders@corpsoul.com"],
     color: "text-gold"
   },
   {
-    icon: "📍",
+    icon: <FaMapMarkedAlt style={{ fontSize: "1em" }} />,
     title: "Address",
     details: ["123 Business District,", "Hyderabad, Telangana 500001"],
     color: "text-gold"
   },
   {
-    icon: "🕒",
+    icon: <FaRegClock style={{ fontSize: "1em" }} />,
     title: "Business Hours",
     details: ["Mon-Fri: 9:00 AM - 6:00 PM", "Sat-Sun: 9:00 AM - 2:00 PM"],
     color: "text-gold"
@@ -44,13 +47,13 @@ export default function Contact() {
 
       </div>
 
-      <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto 4em", padding: "2em 0em", backgroundColor: "#155DFC11", borderRadius: "1em", }}>
+      <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto 4em", padding: "2em 0em", borderRadius: "1em", }}>
 
         <Heading
           title="Let's Build Lasting Business Relationships"
           description="Ready to streamline your corporate supplies? Get in touch with our team today for a personalized consultation and competitive quote." />
 
-        <div style={{ width: "85%", minWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "2em", }}>
+        <div style={{ width: "85%", minWidth: "350px", margin: "2em auto 1em", display: "flex", flexWrap: "wrap", gap: "2em", }}>
 
           <section style={{ flex: "1 1 350px", margin: "2em 0em", }}>
 
@@ -58,13 +61,13 @@ export default function Contact() {
 
           </section>
 
-          <section style={{ margin: "0em auto", flex: "1 1 auto", minWidth: "350px", display: "flex", flexDirection: "column", }}>
+          <section style={{ margin: "0em auto", flex: "1 1 auto", minWidth: "350px", display: "flex", flexDirection: "column", backgroundColor: "#155DFC11", padding:"1em", borderRadius: "1em", }}>
 
             <div>
               {
                 contactInfo.map((entry, id) => (
                   <div key={id} style={{ display: "flex", gap: "1em", margin: "2em auto", alignItems: "flex-start", }}>
-                    <p style={{ fontSize: "2em", display: "inline", textShadow: "1px 1px 1px black", color: "white", placeContent: "center", placeItems: "center", }}>{entry.icon}</p>
+                    <span style={{ fontSize: "2em", display: "inline", color: "white", backgroundColor: "#155DFC99", padding: "0.25em", borderRadius: "5em", placeContent: "center", placeItems: "center", float: "left", }}>{entry.icon}</span>
                     <div style={{}}>
                       <p className="font-bold text-yellow-700">{entry.title}</p>
                       <ul className="leading-tight text-sm text-gray-600">

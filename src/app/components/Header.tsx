@@ -3,10 +3,10 @@
 import logo from "../../app/favicon.ico"
 
 import { useState } from "react";
-import Link from "next/link";
-import TempLogo from "./reusable/TempLogo";
-import { FiMenu, FiX } from "react-icons/fi";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+import { FiMenu, FiX } from "react-icons/fi";
 
 const routes = [
   { name: "Home", path: "/" },
@@ -24,14 +24,13 @@ export default function HeaderComponent() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header style={{ width: "85%", margin: "0 auto", position: "sticky", top: 0, background: "linear-gradient(to right, transparent, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", }}>
+    <header style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", position: "sticky", top: 0, background: "linear-gradient(to right, transparent, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", }}>
 
       {/* Main header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0,  padding: "0.5em 0", }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, padding: "0.5em 0", }}>
 
         {/* Logo */}
         <div style={{}}>
-          {/* <TempLogo /> */}
           <img src={logo.src} alt="corpsoul_logo" style={{ width: "50px", height: "50px", borderRadius: "50%", boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }} />
         </div>
 

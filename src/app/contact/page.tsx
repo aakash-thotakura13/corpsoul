@@ -61,9 +61,9 @@ export default function Contact() {
 
           </section>
 
-          <section style={{ margin: "0em auto", flex: "1 1 auto", minWidth: "350px", display: "flex", flexDirection: "column", backgroundColor: "#155DFC11", padding:"1em", borderRadius: "1em", }}>
+          <section style={{ margin: "0em auto", flex: "1 1 auto", minWidth: "350px", display: "flex", flexDirection: "column", backgroundColor: "#155DFC11", padding: "1em", borderRadius: "1em", }}>
 
-            <div>
+            <div style={{ display: "grid", gap: "1em", margin: "0em auto", }}>
               {
                 contactInfo.map((entry, id) => (
                   <div key={id} style={{ display: "flex", gap: "1em", margin: "2em auto", alignItems: "flex-start", }}>

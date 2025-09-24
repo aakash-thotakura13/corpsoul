@@ -110,7 +110,7 @@ export default function FooterComponent() {
 
         <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", }}>
           <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Contact Us</h2>
-          <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlPhone /> +91 8886911011</p>
+          <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlPhone /> +91 8XXXXXXXXX</p>
           <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlEnvolope />corpsoulsolutions@gmail.com</p>
           <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlPin />Hyderabad, Telangana, India</p>
           <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}>Get Quote</button>

@@ -103,7 +103,7 @@ export default function Services() {
         <p style={{ textAlign: "center", }}>We understand that every business has unique requirements. Contact us to discuss how we can create a tailored supply solution that meets your specific needs.</p>
 
         <section style={{ maxWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "1em", padding: "1em 0em", flex: "1 1 auto", alignItems: "center", justifyContent: "center", }}>
-          <button style={{ backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>Call: +91 8886911011</button>
+          <button style={{ backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>Call: +91 8XXXXXXXXX</button>
           <button style={{ backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>Request Custom Quote</button>
         </section>
 

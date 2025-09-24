@@ -267,6 +267,38 @@ export default function Home() {
         </div>
       </RevealOnScroll>
 
+      <RevealOnScroll>
+        <Heading
+          title="Our Clients"
+          description=""
+        />
+
+        <div style={{ overflow: "hidden", whiteSpace: "nowrap", width: "100%", background: "#f5f7ff", borderRadius: "0.5em", margin: "2em 0", padding: "0.5em 0" }}>
+          {/* <div style={{ display: "flex", gap: "2em", animation: "scroll-left 12s linear infinite", minWidth: "100%" }}> */}
+          <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "1em auto", display: "flex", gap: "2em", justifyContent: "space-evenly", }}>
+            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708928/hyatt_place_logo_j6vxgn.png" alt="client01" />
+            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708929/novartis_logo_p23ah9.png" alt="client02" />
+            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708927/dupont_logo_qmfyfx.png" alt="client03" />
+            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708927/3f_oil_palm_logo_n4fmfi.png" alt="client04" />
+          </div>
+
+          <style>
+            {`
+            @keyframes scroll-left {
+              0% {
+                transform: translateX(100%);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          `}
+          </style>
+
+        </div>
+      </RevealOnScroll>
+
+
     </section >
   );
 }

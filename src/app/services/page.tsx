@@ -11,7 +11,9 @@ const minServices = [
       "Client Hampers",
       "Branded Merchandise",
     ],
-    image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1756617719/photo-1671749999622-4087a86868cc_xlhpbl.jpg",
+    // image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1756617719/photo-1671749999622-4087a86868cc_xlhpbl.jpg",
+    // image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1758690576/corporate-gifting_x9jyee.jpg",
+    image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1758695423/corporate-gifting_6_p7wydc.jpg",
   },
   {
     heading: "Office Stationery",
@@ -22,7 +24,8 @@ const minServices = [
       "Desk Accessories",
       "Presentation Tools",
     ],
-    image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1756617720/photo-1523634540939-0be5fba32c8f_uem3hy.jpg",
+    // image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1756617720/photo-1523634540939-0be5fba32c8f_uem3hy.jpg",
+    image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1758692201/office_stationary_ilt9qe.jpg",
   },
   {
     heading: "Housekeeping Supplies",
@@ -33,9 +36,11 @@ const minServices = [
       "Mops & Brooms",
       "Dustbins & Bins",
     ],
-    image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1756617720/photo-1664008760004-182420e58e7c_k4id3q.jpg",
+    // image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1756617720/photo-1664008760004-182420e58e7c_k4id3q.jpg",
+    image: "https://res.cloudinary.com/ddgmru7d1/image/upload/v1758693931/housekeeping_supplies_2_hgevce.jpg",
   },
 ];
+
 
 export default function Services() {
   return (
@@ -54,9 +59,9 @@ export default function Services() {
             {
               minServices.map((item, id) => {
                 return (
-                  <section key={id} className="services" style={{ maxWidth: "350px", flex: "1 1 350px", borderRadius: "1em", border: "1px solid lightgray", margin: "0em auto", }}>
+                  <section key={id} className="services" style={{ maxWidth: "350px", flex: "1 1 350px", borderRadius: "1em", border: "1px solid lightgray", margin: "0em auto", backgroundColor: "white", }}>
 
-                    <div style={{ width: "350px", height: "150px", borderTopLeftRadius: "1em", borderTopRightRadius: "1em", overflow: "hidden", display: "flex", justifyContent: "center", margin: "0em auto", }}>
+                    <div style={{ width: "348px", height: "150px", borderTopLeftRadius: "1em", borderTopRightRadius: "1em", overflow: "hidden", display: "flex", justifyContent: "center", margin: "0em auto", }}>
                       <img src={item.image} alt={item.heading.replaceAll(" ", "_").toLocaleLowerCase()} style={{ width: "100%", height: "auto", objectFit: "cover", }} />
                     </div>
 

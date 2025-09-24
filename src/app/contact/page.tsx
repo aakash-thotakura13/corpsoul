@@ -2,9 +2,7 @@ import Heading from "../components/reusable/Heading";
 import ContactPageForm from "../components/reusable/ContactPageForm";
 
 import { TbMessageCircle } from "react-icons/tb";
-// import { FaPhone } from "react-icons/fa6";
 import { FaPhone, FaMailBulk, FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
-
 
 
 const contactInfo = [
@@ -34,6 +32,7 @@ const contactInfo = [
   }
 ];
 
+
 export default function Contact() {
   return (
     <section>
@@ -53,7 +52,7 @@ export default function Contact() {
           title="Let's Build Lasting Business Relationships"
           description="Ready to streamline your corporate supplies? Get in touch with our team today for a personalized consultation and competitive quote." />
 
-        <div style={{ width: "85%", minWidth: "350px", margin: "2em auto 1em", display: "flex", flexWrap: "wrap", gap: "2em", }}>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "2em 0em 1em", display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "space-between", }}>
 
           <section style={{ flex: "1 1 350px", margin: "2em 0em", }}>
 
@@ -61,20 +60,30 @@ export default function Contact() {
 
           </section>
 
-          <section style={{ margin: "0em auto", flex: "1 1 auto", minWidth: "350px", display: "flex", flexDirection: "column", backgroundColor: "#155DFC11", padding: "1em", borderRadius: "1em", }}>
+          <section style={{ margin: "0em auto", flex: "1 1 350px", backgroundColor: "#155DFC11", padding: "1em", borderRadius: "1em", }}>
 
-            <div style={{ display: "grid", gap: "1em", margin: "0em auto", }}>
+            <div style={{ minWidth: "350px", margin: "2em 0em", display: "flex", flexDirection: "column", }}>
               {
                 contactInfo.map((entry, id) => (
-                  <div key={id} style={{ display: "flex", gap: "1em", margin: "2em auto", alignItems: "flex-start", }}>
-                    <span style={{ fontSize: "2em", display: "inline", color: "white", backgroundColor: "#155DFC99", padding: "0.25em", borderRadius: "5em", placeContent: "center", placeItems: "center", float: "left", }}>{entry.icon}</span>
-                    <div style={{}}>
-                      <p className="font-bold text-yellow-700">{entry.title}</p>
-                      <ul className="leading-tight text-sm text-gray-600">
-                        {entry.details.map((entry, id) => <li key={id} style={{ listStyle: "disc", marginLeft: "2em", }}>{entry}</li>)}
+                  <div key={id} style={{ minWidth: "350px", display: "flex", flexWrap: "nowrap", alignItems: "flex-start", gap: "1em", marginBottom: "2em", }}>
+                    <p style={{ width: "40px", fontSize: "1.25em", color: "#155DFC", padding: "0.5em", borderRadius: "5em", flexShrink: 0, border: "1px solid #155DFC77", backgroundColor: "#155DFC11", display: "flex", alignItems: "center", justifyContent: "center", aspectRatio: "1/1" }}>
+                      {entry.icon}
+                    </p>
+
+                    <div style={{ flexGrow: 1, minWidth: "0", textAlign: "left", }}>
+                      <p style={{ color: "#185999", fontWeight: "bold", marginBottom: "0.5em", }}>
+                        {entry.title}
+                      </p>
+                      <ul style={{ paddingLeft: "1em", margin: 0 }}>
+                        {entry.details.map((detail, idx) => (
+                          <li key={idx} style={{ listStyle: "disc", marginLeft: "1em", wordBreak: "break-word", }}>
+                            {detail}
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
+
                 ))
               }
             </div>

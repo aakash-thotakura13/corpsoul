@@ -3,7 +3,7 @@
 
 * {
   box-sizing: border-box;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {

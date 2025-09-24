@@ -20,10 +20,6 @@ const routes = [
     name: "Contact",
     path: "/contact",
   },
-  {
-    name: ".",
-    path: "/",
-  },
 ];
 
 const ourServices = [
@@ -60,9 +56,10 @@ export default function FooterComponent() {
   return (
     <section style={{ backgroundColor: "#101828", color: "#FFFFFF", }}>
 
-      <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", display: "flex", flexWrap: "wrap", padding: "2em 0em", gap: "1em", }}>
+      <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", display: "flex", flexWrap: "wrap", padding: "2em 1em", gap: "1em", }}>
 
         <div style={{ flex: "1 1 200px", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
+
           <div style={{ paddingBottom: "1em", }}><TempLogo /></div>
 
           <p>Your trusted partner for corporate supplies, gifting solutions, and housekeeping materials. Building lasting business relationships since 2019.</p>
@@ -85,12 +82,12 @@ export default function FooterComponent() {
 
         </div>
 
-        <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
+        <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", justifyContent: "flex-start", }}>
           <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Quick Links</h2>
           {
             routes.map((route, id) => {
               return (
-                <Link key={id} href={route.path} style={{ display: "grid", }}>
+                <Link key={id} href={route.path} style={{ margin: "0.35em", }}>
                   {route.name}
                 </Link>
               )
@@ -98,12 +95,12 @@ export default function FooterComponent() {
           }
         </div>
 
-        <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
+        <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", justifyContent: "flex-start", }}>
           <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Our Services</h2>
           {
             ourServices.map((service, id) => {
               return (
-                <Link key={id} href={service.path} style={{ display: "grid", }}>
+                <Link key={id} href={service.path} style={{ margin: "0.35em", }}>
                   {service.name}
                 </Link>
               )
@@ -111,11 +108,11 @@ export default function FooterComponent() {
           }
         </div>
 
-        <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
+        <div style={{ flex: "1 1 200px", padding: "10px 0em", display: "flex", flexDirection: "column", }}>
           <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Contact Us</h2>
-          <p style={{ display: "flex", gap: "1em" }}><SlPhone /> +91 8886911011</p>
-          <p style={{ display: "flex", gap: "1em" }}><SlEnvolope />corpsoulsolutions@gmail.com</p>
-          <p style={{ display: "flex", gap: "1em" }}><SlPin />Hyderabad, Telangana, India</p>
+          <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlPhone /> +91 8886911011</p>
+          <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlEnvolope />corpsoulsolutions@gmail.com</p>
+          <p style={{ paddingBottom: "0.5em", display: "flex", gap: "1em" }}><SlPin />Hyderabad, Telangana, India</p>
           <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}>Get Quote</button>
 
         </div>

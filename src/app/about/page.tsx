@@ -47,76 +47,91 @@ const whyChoseCorpSoul = [
 
 export default function AboutUs() {
   return (
-    <main style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", }}>
+    <main>
 
-      <div style={{ margin: "4em auto", display: "grid", gap: "1em", textAlign: "center", }}>
+      <div style={{ background: "linear-gradient(to bottom, #155DFC00, #155DFC21)", padding: "1em 0em", }}>
 
-        <h1 style={{ fontSize: "3.5rem", minWidth: "350px", fontWeight: "600", lineHeight: "1em", flex: "1 1 auto", marginBottom: "0.5em", }}>Your Trusted Partner in Corporate Supply Solutions</h1>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", display: "grid", gap: "1em", textAlign: "center", }}>
 
-        <Heading
-          title=""
-          description="CorpSoul Solutions is a trusted partner in corporate gifting, office stationery, and housekeeping supply needs. We help businesses enhance employee experience and brand value with curated, high-quality products."
-        />
+          <h1 style={{ fontSize: "2.5rem", minWidth: "350px", fontWeight: "600", lineHeight: "1em", flex: "1 1 auto", margin: "1.4em auto 0em", }}>Your Trusted Partner in Corporate Supply Solutions</h1>
 
-      </div>
+          <div style={{ margin: "2em auto" }}>
 
-      <div style={{ margin: "4em auto", display: "flex", gap: "2em 4em", flexWrap: "wrap", justifyContent: "center", padding: "1em", }}>
-        {
-          longTerm.map((item, id) => {
-            return (
-              <div key={id}
-                style={{
-                  padding: "1.5em 1em",
-                  flex: "1 1 auto",
-                  maxWidth: "450px",
-                  minWidth: "350px",
-                  borderRadius: "1em",
-                  border: item.heading.includes("Vision") ? "1px solid #155DFC77" : "1px solid #00800077",
-                  backgroundColor: item.heading.includes("Vision") ? "#155DFC11" : "#00800011",
-                }}
-              >
-                <p style={{ display: "inline-block", fontSize: "1.4em", color: "white", backgroundColor: item.heading.includes("Vision") ? "#155DFC" : "#008000", padding: "0.5em", borderRadius: "0.5em" }}>{item.icon}</p>
-                <h1 style={{ fontWeight: "500", padding: "0.5em 0em", }}>{item.heading}</h1>
-                <p style={{ color: "gray" }}>{item.description}</p>
-              </div>
-            )
-          })
-        }
-      </div>
+            <Heading
+              title=""
+              description="CorpSoul Solutions is a trusted partner in corporate gifting, office stationery, and housekeeping supply needs. We help businesses enhance employee experience and brand value with curated, high-quality products."
+            />
 
-      <div style={{ margin: "4em auto", display: "flex", gap: "2em 4em", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
-
-        <div style={{ flex: "1 1 350px", }}>
-
-          <Heading
-            title="Who Are We"
-            description=""
-          />
-          <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>CorpSoul Solutions has established itself as a leading provider of comprehensive corporate supply solutions. We understand that successful businesses need reliable partners who can deliver consistent quality and service.</p>
-          <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>Our expertise spans across three core areas: thoughtful corporate gifting that strengthens relationships, comprehensive office stationery that keeps businesses running smoothly, and reliable housekeeping supplies that maintain professional environments.</p>
-          <p style={{ margin: "2em 0em", lineHeight: "1.65em", }}>What sets us apart is our commitment to understanding each client&#39;s vision and requirements unique needs and delivering personalized solutions that exceed expectations. We believe in building long-term partnerships based on trust, quality, and reliability.</p>
+          </div>
 
         </div>
 
-        <div style={{ flex: "1 1 350px", }}>
-          <img
-            src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1757043572/photo-1739287088635-444554e7ac0e_zgzaza.jpg"
-            alt="first_image"
-            style={{
-              width: "100%",
-              maxWidth: "600px",
-              height: "auto",
-              flex: "1 1 350px",
-              objectFit: "cover",
-              borderRadius: "1.5em",
-              boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-            }}
-          />
+      </div>
+
+      <div style={{ background: "linear-gradient(to bottom, #155DFC21, #155DFC00)", padding: "2em 0em 3.5em", }}>
+
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", }}>
+          <div style={{ padding: "1em auto", display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "space-between", }}>
+            {
+              longTerm.map((item, id) => {
+                return (
+                  <div key={id}
+                    style={{
+                      padding: "1.5em 2em", flex: "0 1 auto", maxWidth: "590px", minWidth: "350px", borderRadius: "1em",
+                      border: item.heading.includes("Vision") ? "1px solid #155DFC77" : "1px solid #00800077",
+                      background: item.heading.includes("Vision") ? "#155DFC11" : "#00800011",
+                    }}
+                  >
+                    <p style={{ display: "inline-block", fontSize: "1.4em", color: "white", backgroundColor: item.heading.includes("Vision") ? "#155DFC" : "#008000", padding: "0.5em", borderRadius: "0.5em" }}>{item.icon}</p>
+                    <h1 style={{ fontWeight: "500", padding: "0.5em 0em", }}>{item.heading}</h1>
+                    <p style={{ color: "gray" }}>{item.description}</p>
+                  </div>
+                )
+              })
+            }
+          </div>
         </div>
 
       </div>
 
-      <div style={{ margin: "4em auto", }}>
+      <div style={{ background: "linear-gradient(to bottom, #155DFC00, #155DFC21)", padding: "2em 0em", }}>
+
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", padding: "2em auto", display: "flex", gap: "2em 4em", flexWrap: "wrap", justifyContent: "center", }}>
+
+          <div style={{ flex: "1 1 350px", }}>
+
+            <Heading
+              title="Who Are We"
+              description=""
+            />
+            <p style={{ margin: "2em 0.7em", lineHeight: "1.65em", }}>CorpSoul Solutions has established itself as a leading provider of comprehensive corporate supply solutions. We understand that successful businesses need reliable partners who can deliver consistent quality and service.</p>
+            <p style={{ margin: "2em 0.7em", lineHeight: "1.65em", }}>Our expertise spans across three core areas: thoughtful corporate gifting that strengthens relationships, comprehensive office stationery that keeps businesses running smoothly, and reliable housekeeping supplies that maintain professional environments.</p>
+            <p style={{ margin: "2em 0.7em", lineHeight: "1.65em", }}>What sets us apart is our commitment to understanding each client&#39;s vision and requirements unique needs and delivering personalized solutions that exceed expectations. We believe in building long-term partnerships based on trust, quality, and reliability.</p>
+
+          </div>
+
+          <div style={{ flex: "1 1 350px", }}>
+            <img
+              src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1757043572/photo-1739287088635-444554e7ac0e_zgzaza.jpg"
+              alt="first_image"
+              style={{
+                width: "100%",
+                margin: "0em auto",
+                maxWidth: "600px",
+                height: "auto",
+                flex: "1 1 320px",
+                objectFit: "cover",
+                borderRadius: "1.5em",
+                boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+              }}
+            />
+          </div>
+
+        </div>
+
+      </div>
+
+      <div style={{ background: "linear-gradient(to bottom, #155DFC21, #155DFC00)", padding: "2em 0em", }}>
 
         <Heading
           title="Why Choose CorpSoul Solutions?"
@@ -137,24 +152,24 @@ export default function AboutUs() {
           }
         </div>
 
-        <div style={{ background: "", padding: "2em", maxWidth: "1200px", minWidth: "350px", margin: "0em auto", backgroundColor: "#155DFC22", borderRadius: "1em", }}>
+      </div>
 
-          <h2 style={{ fontSize: "1.45em", fontWeight: "bold", textAlign: "center", }}>Ready to Partner With Us?</h2>
-          <p style={{ textAlign: "center", }}>Let&#39;s discuss how CorpSoul Solutions can meet your corporate supply needs and help strengthen your business relationships.</p>
+      <div style={{ background: "", padding: "2em", maxWidth: "1200px", minWidth: "350px", margin: "0em auto 4em", backgroundColor: "#155DFC22", borderRadius: "1em", }}>
 
-          <section style={{ maxWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "1em", padding: "1em 0em", flex: "1 1 auto", alignItems: "center", justifyContent: "center", }}>
+        <h2 style={{ fontSize: "1.45em", fontWeight: "bold", textAlign: "center", }}>Ready to Partner With Us?</h2>
+        <p style={{ textAlign: "center", }}>Let&#39;s discuss how CorpSoul Solutions can meet your corporate supply needs and help strengthen your business relationships.</p>
 
-            <button style={{ backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>
-              <span style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center", }}>Request a Quote <SlArrowRightCircle /></span>
-            </button>
+        <section style={{ maxWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "1em", padding: "1em 0em", flex: "1 1 auto", alignItems: "center", justifyContent: "center", }}>
 
-            <button style={{ backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>
-              <span style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center", }}><SlControlPlay /> Explore Services</span>
-            </button>
+          <button style={{ backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>
+            <span style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center", }}>Request a Quote <SlArrowRightCircle /></span>
+          </button>
 
-          </section>
+          <button style={{ backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>
+            <span style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center", }}><SlControlPlay /> Explore Services</span>
+          </button>
 
-        </div>
+        </section>
 
       </div>
 

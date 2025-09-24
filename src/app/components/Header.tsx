@@ -24,7 +24,7 @@ export default function HeaderComponent() {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", position: "sticky", top: 0, background: "linear-gradient(to right, transparent, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, transparent)", }}>
+    <header style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", position: "sticky", top: 0, backgroundColor: "white", padding: "0em 1em", }}>
 
       {/* Main header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, padding: "0.5em 0", }}>

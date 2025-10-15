@@ -1,8 +1,10 @@
-import Heading from "../components/reusable/Heading";
-import ContactPageForm from "../components/reusable/ContactPageForm";
+"use client"
 
 import { TbMessageCircle } from "react-icons/tb";
 import { FaPhone, FaMailBulk, FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
+
+import Heading from "../components/reusable/Heading";
+import ContactPageForm from "../components/reusable/ContactPageForm";
 
 
 const contactInfo = [
@@ -103,7 +105,7 @@ export default function Contact() {
 
               </div>
 
-              <button style={{ backgroundColor: "#00C950", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "white" }}>Chat Now</button>
+              <button style={{ backgroundColor: "#00C950", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "white" }} onClick={() => window.open("https://wa.me/919999999999", "_blank")}>Chat Now</button>
 
             </div>
 

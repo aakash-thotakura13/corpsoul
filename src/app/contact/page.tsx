@@ -11,19 +11,19 @@ const contactInfo = [
   {
     icon: <FaPhone style={{ fontSize: "1em" }} />,
     title: "Phone Numbers",
-    details: ["Main: +91 XXXXX XXXXX", "Orders: +91 XXXXX XXXXX"],
+    details: ["+91 88869 11011",],
     color: "text-gold"
   },
   {
     icon: <FaMailBulk style={{ fontSize: "1em" }} />,
     title: "Email Addresses",
-    details: ["General: info@corpsoul.com", "Orders: orders@corpsoul.com"],
+    details: ["corpsoulsolutions@gmail.com",],
     color: "text-gold"
   },
   {
     icon: <FaMapMarkedAlt style={{ fontSize: "1em" }} />,
     title: "Address",
-    details: ["123 Business District,", "Hyderabad, Telangana 500001"],
+    details: ["Flat No. 502, Ashutosh Residency,", "Anjaneya Nagar Colony, Moosapet,", "Hyderabad, Telangana 500018"],
     color: "text-gold"
   },
   {

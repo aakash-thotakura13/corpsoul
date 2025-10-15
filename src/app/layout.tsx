@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { ReactNode } from "react";
+import { UserProvider } from "./context/UserContext";
 
 import FooterComponent from "./components/Footer";
 import HeaderComponent from "./components/Header";
-
-import { UserProvider } from "./context/UserContext";
 
 export const metadata: Metadata = {
   title: "Corpsoul Solutions",
@@ -17,11 +16,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>
         <UserProvider>
 
           <HeaderComponent />
-          <hr style={{ backgroundColor: "lightgray", border:"none", height: "2px",}} />
+          <hr style={{ backgroundColor: "lightgray", border: "none", height: "2px", }} />
           <main>{children}</main>
           <FooterComponent />
 

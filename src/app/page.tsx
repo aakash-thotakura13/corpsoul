@@ -1,15 +1,19 @@
+"use client";
 
+import { useRouter } from 'next/navigation';
 import { SlArrowRightCircle, SlControlPlay, } from "react-icons/sl";
 import { FaCheck, FaRegEdit, FaRupeeSign, FaTruckMoving, FaHeadset, FaShieldAlt, } from "react-icons/fa";
 
 import RevealOnScroll from "./components/reusable/RevealOnScroll";
-
 import Heading from "./components/reusable/Heading";
+
+import trustedPartner from "./assets/trustedPartner.jpg"
+
 
 const firstRowData = [
   {
-    heading: "500+",
-    description: "Happy Clients",
+    heading: "5 Star",
+    description: "Rating",
   },
   {
     heading: "5 Years",
@@ -111,10 +115,13 @@ const longTerm2 = [
     heading: "5+",
     description: "Years Experience",
   },
-]
+];
 
 
 export default function Home() {
+
+  const router = useRouter();
+
   return (
     <section style={{}}>
 
@@ -130,8 +137,8 @@ export default function Home() {
               <p style={{ color: "grey", fontSize: "1.2em", flex: "1 1 auto", marginBottom: "0.35em", }}>From thoughtful corporate gifts to essential office stationary and reliable housekeeping materials - <span style={{ fontSize: "inherit", fontWeight: "bold", color: "#155DFC", }}>CorpSoul</span> provides comprehensive B2B solutions that strengthen business relationships and enhance workplace efficiency.</p>
 
               <section style={{ display: "flex", justifyContent: "center", gap: "1em", padding: "2em 0em", flex: "1 1 auto", alignItems: "center", }}>
-                <button style={{ display: "flex", alignItems: "center", gap: "1em", backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}>Request a Quote <SlArrowRightCircle /></button>
-                <button style={{ display: "flex", alignItems: "center", gap: "1em", backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", }}><SlControlPlay /> Explore Services</button>
+                <button style={{ display: "flex", alignItems: "center", gap: "1em", backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }} onClick={() => { router.push("/contact") }}>Request a Quote <SlArrowRightCircle /></button>
+                <button style={{ display: "flex", alignItems: "center", gap: "1em", backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", }} onClick={() => { router.push("/services") }}><SlControlPlay /> Explore Services</button>
               </section>
 
               <section style={{ flex: "1 1 auto", display: "flex", justifyContent: "center", textAlign: "center", gap: "2em", }}>
@@ -147,7 +154,7 @@ export default function Home() {
             </div>
 
             <img
-              src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1756564995/photo-1642522029691-029b5a432954_inch5z.jpg"
+              src={trustedPartner.src}
               alt="first_image"
               style={{
                 width: "100%",
@@ -266,37 +273,6 @@ export default function Home() {
 
         </div>
       </RevealOnScroll>
-
-      {/* <RevealOnScroll>
-        <Heading
-          title="Our Clients"
-          description=""
-        />
-
-        <div style={{ overflow: "hidden", whiteSpace: "nowrap", width: "100%", background: "#f5f7ff", borderRadius: "0.5em", margin: "2em 0", padding: "0.5em 0" }}>
-          <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "1em auto", display: "flex", gap: "2em", justifyContent: "space-evenly", }}>
-            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708928/hyatt_place_logo_j6vxgn.png" alt="client01" />
-            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708929/novartis_logo_p23ah9.png" alt="client02" />
-            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708927/dupont_logo_qmfyfx.png" alt="client03" />
-            <img style={{ width: "120px", aspectRatio: "3/2", objectFit: "contain", }} src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1758708927/3f_oil_palm_logo_n4fmfi.png" alt="client04" />
-          </div>
-
-          <style>
-            {`
-            @keyframes scroll-left {
-              0% {
-                transform: translateX(100%);
-              }
-              100% {
-                transform: translateX(-100%);
-              }
-            }
-          `}
-          </style>
-
-        </div>
-      </RevealOnScroll> */}
-
 
     </section >
   );

@@ -1,8 +1,14 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { FaEye, FaBullseye } from "react-icons/fa6";
+import { SlArrowRightCircle, SlControlPlay } from "react-icons/sl";
 import { TbUsers, TbBadge, TbBrandFlightradar24, TbUsersGroup } from "react-icons/tb";
 
 import Heading from "../components/reusable/Heading";
-import { SlArrowRightCircle, SlControlPlay } from "react-icons/sl";
+
+import whoAreWe from "../assets/whoAreWe.jpg"
+
 
 const longTerm = [
   {
@@ -42,10 +48,12 @@ const whyChoseCorpSoul = [
     description: "Personal account managers for seamless service",
     color: "#800080",
   },
-]
-
+];
 
 export default function AboutUs() {
+
+  const router = useRouter();
+
   return (
     <main>
 
@@ -96,7 +104,7 @@ export default function AboutUs() {
 
       <div style={{ background: "linear-gradient(to bottom, #155DFC00, #155DFC21)", padding: "2em 0em", }}>
 
-        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", padding: "2em auto", display: "flex", gap: "2em 4em", flexWrap: "wrap", justifyContent: "center", }}>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "0em auto", padding: "2em auto", display: "flex", gap: "2em 4em", flexWrap: "wrap", justifyContent: "center", alignItems: "center", }}>
 
           <div style={{ flex: "1 1 350px", }}>
 
@@ -112,7 +120,7 @@ export default function AboutUs() {
 
           <div style={{ flex: "1 1 350px", }}>
             <img
-              src="https://res.cloudinary.com/ddgmru7d1/image/upload/v1757043572/photo-1739287088635-444554e7ac0e_zgzaza.jpg"
+              src={whoAreWe.src}
               alt="first_image"
               style={{
                 width: "100%",
@@ -161,11 +169,11 @@ export default function AboutUs() {
 
         <section style={{ maxWidth: "350px", margin: "1em auto", display: "flex", flexWrap: "wrap", gap: "1em", padding: "1em 0em", flex: "1 1 auto", alignItems: "center", justifyContent: "center", }}>
 
-          <button style={{ backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>
+          <button style={{ backgroundColor: "#FFFFFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }} onClick={() => router.push("/contact")}>
             <span style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center", }}>Request a Quote <SlArrowRightCircle /></span>
           </button>
 
-          <button style={{ backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }}>
+          <button style={{ backgroundColor: "#155DFC", color: "#FFFFFF", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", flex: "1 1 auto", }} onClick={() => router.push("/services")}>
             <span style={{ display: "flex", alignItems: "center", gap: "0.5em", justifyContent: "center", }}><SlControlPlay /> Explore Services</span>
           </button>
 

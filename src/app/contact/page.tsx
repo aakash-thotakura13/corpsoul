@@ -54,15 +54,15 @@ export default function Contact() {
           title="Let's Build Lasting Business Relationships"
           description="Ready to streamline your corporate supplies? Get in touch with our team today for a personalized consultation and competitive quote." />
 
-        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "2em 0em 1em", display: "flex", flexWrap: "wrap", gap: "2em", justifyContent: "space-between", }}>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "2em 0em 1em", display: "flex", gap: "1em", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start", }}>
 
-          <section style={{ flex: "1 1 350px", margin: "2em 0em", }}>
+          <section style={{ flex: "1 1 auto", minWidth: "350px", maxWidth: "500px", margin: "2em 0em", }}>
 
             <ContactPageForm />
 
           </section>
 
-          <section style={{ margin: "0em auto", flex: "1 1 350px", backgroundColor: "#155DFC11", padding: "1em", borderRadius: "1em", }}>
+          <section style={{ flex: "1 1 auto", minWidth: "350px", maxWidth: "500px", backgroundColor: "#155DFC11", padding: "1em", borderRadius: "1em", }}>
 
             <div style={{ minWidth: "350px", margin: "2em 0em", display: "flex", flexDirection: "column", }}>
               {
@@ -115,15 +115,15 @@ export default function Contact() {
 
               <p style={{ fontSize: "0.85em" }}>Browse our complete product range and pricing details</p>
 
-              <button style={{ backgroundColor: "#155DFC11", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "#155DFC" }}>Download PDF</button>
+              <button style={{ backgroundColor: "#155DFC11", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "#155DFC" }} onClick={() => window.open("https://drive.google.com/file/d/1Jut7bU9YI1aMZG3Vk936SOCZnoZR-NZu/view?usp=sharing", "_blank")}>Download PDF</button>
 
             </div>
 
           </section>
 
         </div>
-      </div>
 
+      </div>
 
     </section>
   )

@@ -1,21 +1,23 @@
 "use client";
 
-import logo from "../../app/favicon.ico"
-
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-
 import { FiMenu, FiX } from "react-icons/fi";
+
+import logo from "../../app/favicon.ico"
 
 const routes = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
+  // { name: "Catalogue", path: "/catalogue" },
 ];
 
 export default function HeaderComponent() {
+
+  const router = useRouter();
 
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,7 +38,7 @@ export default function HeaderComponent() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex flex-1 justify-center items-center">
-          <ul style={{ display: "flex", gap: "5em", listStyle: "none", padding: 0, margin: 0 }}>
+          <ul style={{ display: "flex", gap: "3em", listStyle: "none", padding: 0, margin: 0 }}>
             {routes.map((route) => {
               const isActive = pathname === route.path;
               return (
@@ -60,8 +62,8 @@ export default function HeaderComponent() {
 
         {/* CTA buttons - Desktop */}
         <div className="hidden md:flex flex-1 justify-end items-center gap-4">
-          <button style={{ backgroundColor: "#FFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em" }}>Request Quote</button>
-          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em" }}>Get Started</button>
+          <button style={{ backgroundColor: "#FFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em" }} onClick={() => router.push("/contact")}>Request Quote</button>
+          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em" }} onClick={() => router.push("/signup")}>Get Started</button>
         </div>
 
         {/* Hamburger Button - Mobile Only */}

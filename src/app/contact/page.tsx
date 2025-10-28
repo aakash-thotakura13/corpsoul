@@ -105,7 +105,12 @@ export default function Contact() {
 
               </div>
 
-              <button style={{ backgroundColor: "#00C950", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "white" }} onClick={() => window.open("https://wa.me/919999999999", "_blank")}>Chat Now</button>
+              <button
+                style={{ backgroundColor: "#00C950", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "white" }}
+                onClick={() => window.open("https://wa.me/919999999999", "_blank")}
+              >
+                Chat Now
+              </button>
 
             </div>
 
@@ -115,7 +120,12 @@ export default function Contact() {
 
               <p style={{ fontSize: "0.85em" }}>Browse our complete product range and pricing details</p>
 
-              <button style={{ backgroundColor: "#155DFC11", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "#155DFC" }} onClick={() => window.open("https://drive.google.com/file/d/1Jut7bU9YI1aMZG3Vk936SOCZnoZR-NZu/view?usp=sharing", "_blank")}>Download PDF</button>
+              <button
+                style={{ backgroundColor: "#155DFC11", borderRadius: "5px", padding: "4px 8px", fontSize: "0.9em", fontWeight: "600", color: "#155DFC" }}
+                onClick={() => window.open("https://drive.google.com/file/d/1Jut7bU9YI1aMZG3Vk936SOCZnoZR-NZu/view?usp=sharing", "_blank")}
+              >
+                Download PDF
+              </button>
 
             </div>
 

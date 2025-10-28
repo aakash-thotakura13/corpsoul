@@ -218,7 +218,12 @@ export default function Home() {
           </div>
 
           <div style={{ textAlign: "center", padding: "1em 0em", }}>
-            <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}>Request Detailed Catelogue</button>
+            <button
+              style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", }}
+              onClick={() => window.open("https://drive.google.com/file/d/1Jut7bU9YI1aMZG3Vk936SOCZnoZR-NZu/view?usp=sharing", "_blank")}
+            >
+              Request Detailed Catelogue
+            </button>
           </div>
 
         </div>

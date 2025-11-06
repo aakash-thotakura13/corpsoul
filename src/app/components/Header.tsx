@@ -62,8 +62,8 @@ export default function HeaderComponent() {
 
         {/* CTA buttons - Desktop */}
         <div className="hidden md:flex flex-1 justify-end items-center gap-4">
-          <button style={{ backgroundColor: "#FFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em" }} onClick={() => router.push("/contact")}>Request Quote</button>
-          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em" }} onClick={() => router.push("/signup")}>Get Started</button>
+          {/* <button style={{ backgroundColor: "#FFF", color: "#191919", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em" }} onClick={() => router.push("/contact")}>Request Quote</button> */}
+          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em" }} onClick={() => router.push("/contact")}>Request Quote</button>
         </div>
 
         {/* Hamburger Button - Mobile Only */}

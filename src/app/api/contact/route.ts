@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { fullName, emailAdd, phoneNumber, inquiryType, subject, message } =
+    const { companyName, emailAdd, phoneNumber, inquiryType, subject, message } =
       await req.json();
 
     // creating transporter
@@ -18,9 +18,9 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: emailAdd,
       to: process.env.EMAIL_USER,
-      subject: `New Inquiry from ${fullName}: ${subject}`,
+      subject: `New Inquiry from ${companyName}: ${subject}`,
       text: `
-        Name: ${fullName}
+        Name: ${companyName}
         Email: ${emailAdd}
         Phone: ${phoneNumber}
         Inquiry Type: ${inquiryType}

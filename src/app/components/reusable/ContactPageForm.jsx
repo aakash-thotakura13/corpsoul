@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function ContactPageForm() {
   const [formData, setFormData] = useState({
-    fullName: "",
+    companyName: "",
     emailAdd: "",
     phoneNumber: "",
     inquiryType: "",
@@ -34,7 +34,7 @@ export default function ContactPageForm() {
       if (result.success) {
         alert("✅ Message sent successfully!");
         setFormData({
-          fullName: "",
+          companyName: "",
           emailAdd: "",
           phoneNumber: "",
           inquiryType: "",
@@ -42,7 +42,7 @@ export default function ContactPageForm() {
           message: "",
         });
       } else {
-        alert("❌ Failed to send message.");
+        alert(`❌ ${result.message || "Failed to send message."}`);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -56,7 +56,7 @@ export default function ContactPageForm() {
 
       {/* Name & Email */}
       <section style={{ display: "flex", gap: "1em", flexWrap: "wrap", margin: "1em auto", justifyContent: "space-between" }}>
-        <Input label="Full Name *" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" />
+        <Input label="Company Name *" name="companyName" value={formData.companyName} onChange={handleChange} placeholder="Company Name" />
         <Input label="Email Address *" name="emailAdd" value={formData.emailAdd} onChange={handleChange} placeholder="Email Address" type="email" />
       </section>
 

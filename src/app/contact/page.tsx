@@ -20,12 +20,12 @@ const contactInfo = [
     details: ["corpsoulsolutions@gmail.com",],
     color: "text-gold"
   },
-  {
-    icon: <FaMapMarkedAlt style={{ fontSize: "1em" }} />,
-    title: "Address",
-    details: ["Flat No. 502, Ashutosh Residency,", "Anjaneya Nagar Colony, Moosapet,", "Hyderabad, Telangana 500018"],
-    color: "text-gold"
-  },
+  // {
+  //   icon: <FaMapMarkedAlt style={{ fontSize: "1em" }} />,
+  //   title: "Address",
+  //   details: ["Flat No. 502, Ashutosh Residency, Anjaneya Nagar Colony, Moosapet, \n Hyderabad, Telangana 500018"],
+  //   color: "text-gold"
+  // },
   {
     icon: <FaRegClock style={{ fontSize: "1em" }} />,
     title: "Business Hours",
@@ -54,9 +54,9 @@ export default function Contact() {
           title="Let's Build Lasting Business Relationships"
           description="Ready to streamline your corporate supplies? Get in touch with our team today for a personalized consultation and competitive quote." />
 
-        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "2em 0em 1em", display: "flex", gap: "1em", flexWrap: "wrap", justifyContent: "center", alignItems: "flex-start", }}>
+        <div style={{ maxWidth: "1200px", minWidth: "350px", margin: "2em 0em 1em", display: "flex", gap: "1em", flexWrap: "wrap", justifyContent: "center", alignItems: "stretch", }}>
 
-          <section style={{ flex: "1 1 auto", minWidth: "350px", maxWidth: "500px", margin: "2em 0em", }}>
+          <section style={{ flex: "1 1 auto", minWidth: "350px", maxWidth: "500px", margin: "0em 0em", }}>
 
             <ContactPageForm />
 

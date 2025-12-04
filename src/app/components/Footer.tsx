@@ -89,6 +89,13 @@ export default function FooterComponent() {
 
         </div>
 
+        <div style={{ flex: "1 1 340px", maxWidth: "400px", padding: "10px 7px", display: "flex", flexDirection: "column", justifyContent: "space-around", }}>
+          <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Contact Us</h2>
+          <p style={{ paddingBottom: "1em", display: "flex", gap: "1em" }}><SlPhone /> +91 88869 11011</p>
+          <p style={{ paddingBottom: "1em", display: "flex", gap: "1em" }}><SlEnvolope />corpsoulsolutions@gmail.com</p>
+          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", maxWidth: "200px", }} onClick={() => window.open("https://wa.me/919999999999", "_blank")}>Get Quote</button>
+        </div>
+
         <div style={{ flex: "1 1 340px", maxWidth: "400px", padding: "10px 7px", display: "flex", flexDirection: "column", justifyContent: "flex-start", }}>
           <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Quick Links</h2>
           {
@@ -107,22 +114,17 @@ export default function FooterComponent() {
           {
             ourServices.map((service, id) => {
               return (
-                <Link key={id} href={service.path} style={{ margin: "0.35em", }}>
+                <p key={id} style={{ margin: "0.35em", }}>
                   {service.name}
-                </Link>
+                </p>
               )
             })
           }
         </div>
 
-        <div style={{ flex: "1 1 340px", maxWidth: "400px", padding: "10px 7px", display: "flex", flexDirection: "column", justifyContent: "space-around", }}>
-          <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Contact Us</h2>
-          <p style={{ paddingBottom: "1em", display: "flex", gap: "1em" }}><SlPhone /> +91 88869 11011</p>
-          <p style={{ paddingBottom: "1em", display: "flex", gap: "1em" }}><SlEnvolope />corpsoulsolutions@gmail.com</p>
-          <button style={{ backgroundColor: "#155DFC", color: "#ffffff", border: "1px solid #155DFC", padding: "0.5em 1em", borderRadius: "0.5em", maxWidth: "200px", }} onClick={() => window.open("https://wa.me/919999999999", "_blank")}>Get Quote</button>
-        </div>
+        
 
-        <div style={{ flex: "1 1 340px", maxWidth: "400px", padding: "10px 7px", }}>
+        {/* <div style={{ flex: "1 1 340px", maxWidth: "400px", padding: "10px 7px", }}>
           <h2 style={{ paddingBottom: "1em", fontWeight: "bold", }}>Address</h2>
 
           <address style={{ marginBottom: "1em", }}>
@@ -137,7 +139,7 @@ export default function FooterComponent() {
             Moosapet, Kukatpally,Hyderabad.
           </address>
 
-        </div>
+        </div> */}
 
       </div>
 

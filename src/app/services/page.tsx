@@ -85,9 +85,9 @@ export default function Services() {
                         }
                       </ul>
 
-                      <div style={{ padding: "1em 0em", display: "flex", justifyContent: "flex-end", }}>
+                      {/* <div style={{ padding: "1em 0em", display: "flex", justifyContent: "flex-end", }}>
                         <button style={{ display: "flex", placeContent: "center", placeItems: "center", gap: "1em", border: "1px solid lightgray", padding: "0.5em 1em", borderRadius: "0.5em", fontWeight: "500", }}>Learn More <SlControlPlay /></button>
-                      </div>
+                      </div> */}
 
                     </div>
 
